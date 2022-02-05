@@ -1,0 +1,64 @@
+* {
+	--global-font-size: 1rem;
+	--global-line-height: 1.4em;
+	--global-space: 10px;
+	--font-stack: monospace, sans-serif;
+	--mono-font-stack: monospace, sans-serif;
+	--background-color: #222225;
+	--page-width: 70em;
+	--font-color: #e8e9ed;
+	--invert-font-color: #222225;
+	--secondary-color: #a3abba;
+	--tertiary-color: #a3abba;
+	--primary-color: #62c4ff;
+	--error-color: #ff3c74;
+	--progress-bar-background: #3f3f44;
+	--progress-bar-fill: #62c4ff;
+	--code-bg-color: #3f3f44;
+	--input-style: solid;
+	--display-h1-decoration: block;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: 1vh clamp(1rem, 5vw, 3rem) 1rem;
+}
+.root > * {
+	--layout-spacing: max(8vh, 3rem);
+	width: min(100%, var(--page-width));
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+.transaction {
+	min-width: 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.transaction legend {
+	min-width: 0;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+footer {
+	flex-shrink: 0;
+	margin-top: auto;
+	padding-top: var(--layout-spacing);
+	color: var(--secondary-color);
+}
+
+footer p {
+	border-top: 1px solid var(--tertiary-color);
+	padding-top: 0.25em;
+	font-size: 0.9rem;
+}

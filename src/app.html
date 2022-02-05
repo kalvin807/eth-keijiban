@@ -5,9 +5,10 @@
 		<meta name="description" content="Svelte demo app" />
 		<link rel="icon" href="%svelte.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" />
 		%svelte.head%
 	</head>
-	<body>
-		<div id="svelte">%svelte.body%</div>
+	<body class="terminal">
+		<div id="svelte" class="root">%svelte.body%</div>
 	</body>
 </html>

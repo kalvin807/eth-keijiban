@@ -15,7 +15,11 @@
 	});
 </script>
 
-<h3>{blockNumber}</h3>
-{#each txns as h}
-	<TxnRow {provider} txnHash={h} />
-{/each}
+<div class="terminal-card">
+	<header>Block: {blockNumber}</header>
+	<div>
+		{#each txns as h}
+			<TxnRow {provider} txnHash={h} />
+		{/each}
+	</div>
+</div>
