@@ -28,10 +28,11 @@
 
 {#if utf8}
 	<div>
-		<pre> -------- </pre>
-		<pre> |{txn.hash}| </pre>
-		<pre> |{utf8} | </pre>
-		<a href={`https://etherscan.io/tx/${txn.hash}`}>| etherscan</a>
-		<pre> -------- </pre>
+		<fieldset class="transaction">
+			<legend>{txn.hash}</legend>
+			{utf8}
+			<br />
+			<a target="_blank" href={`https://etherscan.io/tx/${txn.hash}`}>etherscan</a>
+		</fieldset>
 	</div>
 {/if}
